@@ -2,10 +2,12 @@ package com.FinancialInsight.Engine.ratioCalculation.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
+@ToString
 @Setter
-public class AnnualReport {
+public class AnnualReportBalance implements Report{
     private String fiscalDateEnding;
     private String reportedCurrency;
     private String totalAssets;
@@ -46,4 +48,8 @@ public class AnnualReport {
     private String commonStockSharesOutstanding;
 
 
+    @Override
+    public String fiscalDateEnding() {
+        return fiscalDateEnding;
+    }
 }

@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class QuarterlyReport {
+public class QuarterlyReportBalance implements Report {
     private String fiscalDateEnding;
     private String reportedCurrency;
     private String totalAssets;
@@ -45,6 +45,11 @@ public class QuarterlyReport {
     private String commonStock;
     private String commonStockSharesOutstanding;
 
+        @Override
+        public String fiscalDateEnding() {
+            return fiscalDateEnding;
+        }
 
 
 }
+
